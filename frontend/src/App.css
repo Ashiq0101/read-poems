@@ -63,8 +63,11 @@ Light Sage:    #dfe8df
 }
 
 .hero-content {
-  max-width: 600px;
-  color: white;
+  max-width: 900px;        /* limit width */
+  width: 100%;
+  margin: 0 auto;          /* center it */
+  padding: 40px 30px;
+  box-sizing: border-box;
 }
 
 /* Hero Title */
@@ -525,28 +528,19 @@ Light Sage:    #dfe8df
 
 @media (max-width: 768px) {
 
+  .hero-content {
+    max-width: 100%;
+    padding: 25px 15px;
+  }
+
   .hero-title {
     font-size: 1.8rem;
     line-height: 1.3;
-    word-break: break-word;
-  }
-
-  .hero-subtitle {
-    font-size: 0.9rem;
   }
 
   .hero-buttons {
     flex-direction: column;
     gap: 12px;
-    align-items: center;
   }
 
-  .navbar {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-}
-.hero-title {
-  font-size: clamp(1.8rem, 5vw, 3rem);
 }
