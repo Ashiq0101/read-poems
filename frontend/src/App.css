@@ -1,0 +1,516 @@
+/* ================= GLOBAL RESET ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+#root {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* ================= COLOR THEME ================= */
+/*
+Primary Green: #5f8f73
+Dark Accent:   #3f5f4b
+Soft Green:    #8fbfa3
+Light Sage:    #dfe8df
+*/
+
+/* ================= HERO SECTION ================= */
+
+.hero-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.hero-section {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Green tinted overlay */
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 60, 45, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;   /* 🔥 move content left */
+  padding: 0 8%;
+  text-align: left;
+}
+
+.hero-content {
+  max-width: 600px;
+  color: white;
+}
+
+/* Hero Title */
+.hero-title {
+  font-size: 64px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-title span {
+  color: #8fbfa3;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 18px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 36px;
+  font-weight: 800;
+  color: white;
+}
+
+.nav-btn {
+  background: #5f8f73;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: #3f5f4b;
+  transform: scale(1.05);
+}
+
+/* ================= BUTTONS ================= */
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.primary-btn {
+  background: #5f8f73;
+  color: white;
+  padding: 14px 35px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.primary-btn:hover {
+  background: #3f5f4b;
+  transform: scale(1.05);
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 2px solid white;
+  padding: 14px 35px;
+  border-radius: 40px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.secondary-btn:hover {
+  background: white;
+  color: #3f5f4b;
+}
+
+/* ================= AUTH BOX ================= */
+
+.auth-box-modern {
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 25px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.auth-box-modern input {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+}
+
+.auth-box-modern button {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #5f8f73;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-box-modern button:hover {
+  background: #3f5f4b;
+}
+
+/* ================= LOGIN PAGE ================= */
+
+.login-page {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #dfe8df, #b8d1c2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  padding: 40px;
+  border-radius: 25px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+}
+
+.login-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #3f5f4b;
+  margin-bottom: 25px;
+}
+
+.login-input-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 15px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #5f8f73;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #3f5f4b;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #3f5f4b;
+  text-decoration: none;
+}
+
+/* ================= UPLOAD PAGE ================= */
+
+.upload-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #dfe8df, #b8d1c2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 20px;
+}
+
+.upload-card {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 25px;
+  width: 420px;
+  max-width: 95%;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.25);
+  text-align: center;
+}
+
+.upload-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #3f5f4b;
+  margin-bottom: 25px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.upload-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: #5f8f73;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.upload-btn:hover {
+  background: #3f5f4b;
+}
+
+/* ================= ALL POEMS PAGE ================= */
+
+.poems-page {
+  min-height: 100vh;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #dfe8df, #a8cbb7);
+}
+
+.poems-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.poems-header h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #3f5f4b;
+}
+
+.back-btn {
+  background: #5f8f73;
+  padding: 10px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #3f5f4b;
+}
+
+.poems-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.modern-poem-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.modern-poem-card:hover {
+  transform: translateY(-8px);
+}
+
+.modern-poem-card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #5f8f73;
+}
+
+.modern-poem-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+  white-space: pre-line;
+  margin-bottom: 20px;
+}
+
+.modern-delete-btn {
+  background: #6d8f7a;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.modern-delete-btn:hover {
+  background: #3f5f4b;
+}
+
+.no-poems {
+  font-size: 18px;
+  color: #3f5f4b;
+  text-align: center;
+  grid-column: 1 / -1;
+}
+/* ================= WATERMARK ================= */
+
+.poems-page {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ================= SOFT ORGANIC BACKGROUND ================= */
+
+.poems-page {
+  position: relative;
+  min-height: 100vh;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #dfe8df, #a8cbb7);
+  overflow: hidden;
+}
+
+/* Subtle organic shapes */
+.poems-page::before,
+.poems-page::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle at center, rgba(95, 143, 115, 0.08), transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* Top left soft blob */
+.poems-page::before {
+  top: -200px;
+  left: -200px;
+}
+
+/* Bottom right soft blob */
+.poems-page::after {
+  bottom: -200px;
+  right: -200px;
+}
+
+/* Keep content above */
+.poems-page > * {
+  position: relative;
+  z-index: 2;
+}
+/* ================= CATERPILLAR PATTERN WATERMARK ================= */
+
+.poems-page {
+  position: relative;
+  min-height: 100vh;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #dfe8df, #a8cbb7);
+  overflow: hidden;
+}
+
+/* Repeating caterpillar pattern */
+.poems-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='220' height='120' viewBox='0 0 220 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 80 Q40 30 80 60 T150 60 T210 70' stroke='%233f5f4b' stroke-width='10' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 220px 120px;
+  opacity: 0.05;   /* VERY soft */
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Keep content above */
+.poems-page > * {
+  position: relative;
+  z-index: 2;
+}
+/* ================= CATERPILLAR IMAGE WATERMARK ================= */
+
+.poems-page {
+  position: relative;
+  min-height: 100vh;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #dfe8df, #a8cbb7);
+  overflow: hidden;
+}
+
+/* repeating caterpillar photo watermark */
+.poems-page {
+  min-height: 100vh;
+  padding: 60px 40px;
+
+  background:
+    linear-gradient(rgba(205, 221, 207, 0.85), rgba(205, 221, 207, 0.85)),
+    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVVUb60wFgUJBs9e0BH9flr7vLt33TK5yDBV47Uw2GVdiL-0GEAoImBdOhvlVvEf9k6Ahqj5dpC66ypFXNwXdsB298aISvFOlO6xS30w&s=10");
+
+  background-repeat: repeat;
+  background-size: 180px;
+}
+.modern-edit-btn {
+  background: #3f5f4b;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.modern-cancel-btn {
+  background: #999;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
