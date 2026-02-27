@@ -37,11 +37,16 @@ Light Sage:    #dfe8df
 
 .hero-section {
   width: 100%;
-  height: 100vh;
+  min-height: 100dvh; /* better mobile support */
+  height: auto;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
 /* Green tinted overlay */
@@ -513,4 +518,43 @@ Light Sage:    #dfe8df
   border-radius: 20px;
   color: white;
   cursor: pointer;
+}
+/* ===========================
+   MOBILE RESPONSIVE FIX
+=========================== */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero-title {
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .hero-section {
+    padding: 20px;
+  }
+
+  .auth-box-modern {
+    width: 90%;
+    padding: 15px;
+  }
+
 }
