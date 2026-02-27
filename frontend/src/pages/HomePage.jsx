@@ -30,13 +30,13 @@ function HomePage() {
   }, []);
 
   const handleAuthSubmit = () => {
-    if (email === "abc@gmail.com" && password === "ssss") {
+    if (email === "abc@gmail.com" && password === "123") {
       setIsAuthenticated(true);
       setShowAuth(false);
       setEmail("");
       setPassword("");
     } else {
-      alert("Only Ashiq is allowed");
+      alert("Only User is allowed");
       setShowAuth(false);
       setEmail("");
       setPassword("");
