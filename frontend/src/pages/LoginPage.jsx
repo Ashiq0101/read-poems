@@ -8,7 +8,7 @@ function LoginPage() {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    if (email === "abc@gmail.com" && password === "123") {
+    if (email === "abc@gmail.com" && password === "ssss") {
       navigate("/upload");
     } else {
       alert("Only User is allowed 💔");

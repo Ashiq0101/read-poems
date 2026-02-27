@@ -31,7 +31,7 @@ function AllPoems() {
     const password = prompt("Enter Password:");
     if (password === null) return;
 
-    if (password !== "123") {
+    if (password !== "ssss") {
       alert("Only User is allowed 💔");
       return;
     }
@@ -66,7 +66,7 @@ function AllPoems() {
     const password = prompt("Enter Password:");
     if (password === null) return;
 
-    if (email !== "abc@gmail.com" || password !== "123") {
+    if (email !== "abc@gmail.com" || password !== "ssss") {
       alert("Only Ashiq is allowed 💔");
       return;
     }
