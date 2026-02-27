@@ -11,7 +11,7 @@ function UploadPage() {
     
     const password = prompt("Enter Password:");
 
-    if ( password !== "123") {
+    if ( password !== "s123") {
       alert("Only User is allowed 💔");
       return;
     }

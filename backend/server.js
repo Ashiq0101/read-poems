@@ -13,10 +13,18 @@ const app = express();
    MIDDLEWARE
 =================================*/
 
-// Allow cross-origin requests
-app.use(cors());
+// ✅ CORS Configuration for Vercel Frontend
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173", // local development
+      "https://read-poems.vercel.app", // production frontend
+    ],
+    credentials: true,
+  })
+);
 
-// 🚀 VERY IMPORTANT — Increase body size limit for Base64 images
+// 🚀 Increase body size limit for Base64 images
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
@@ -25,6 +33,11 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 =================================*/
 
 app.use("/api/poems", poemRoutes);
+
+// Optional test route
+app.get("/", (req, res) => {
+  res.send("API is running...");
+});
 
 /* ===============================
    SERVER START

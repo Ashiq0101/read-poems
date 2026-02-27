@@ -30,7 +30,7 @@ function HomePage() {
   }, []);
 
   const handleAuthSubmit = () => {
-    if (email === "abc@gmail.com" && password === "123") {
+    if (email === "abc@gmail.com" && password === "s123") {
       setIsAuthenticated(true);
       setShowAuth(false);
       setEmail("");

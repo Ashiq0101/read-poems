@@ -3,12 +3,12 @@ import { useNavigate, Link } from "react-router-dom";
 import "./../App.css";
 
 function LoginPage() {
-  const [email, setEmail] = useState("");
+  
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    if (email === "abc@gmail.com" && password === "123") {
+    if ( password === "s123") {
       navigate("/upload");
     } else {
       alert("Only User is allowed 💔");
