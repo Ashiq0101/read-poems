@@ -30,14 +30,7 @@ function LoginPage() {
             Enter your credentials to continue ✨
           </p>
 
-          <div className="login-input-group">
-            <input
-              type="email"
-              placeholder="Email Address"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
+          
 
           <div className="login-input-group">
             <input
