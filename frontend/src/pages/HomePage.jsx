@@ -29,7 +29,9 @@ function HomePage() {
     fetchImage();
   }, []);
 
-  const handleAuthSubmit = () => {
+  const handleAuthSubmit = (e) => {
+    e.preventDefault();
+
     if (email === "abc@gmail.com" && password === "123") {
       setIsAuthenticated(true);
       setShowAuth(false);
@@ -37,7 +39,6 @@ function HomePage() {
       setPassword("");
     } else {
       alert("Only User is allowed");
-      setShowAuth(false);
       setEmail("");
       setPassword("");
     }
@@ -75,7 +76,6 @@ function HomePage() {
       {/* NAVBAR */}
       <div className="navbar">
         <div className="logo">
-          
           💖 <span className="brand">Welcome To User’s Diary</span>
         </div>
 
@@ -94,10 +94,10 @@ function HomePage() {
         }}
       >
         <div className="hero-overlay">
-
           <div className="hero-content">
+
             <h1 className="hero-title">
-              Where <span>Feelings</span> Become Forever 
+              Where <span>Feelings</span> Become Forever
             </h1>
 
             <p className="hero-subtitle">
@@ -137,27 +137,60 @@ function HomePage() {
               )}
             </div>
 
+            {/* AUTH BOX */}
             {showAuth && (
               <div className="auth-box-modern">
-                <input
-                  type="email"
-                  placeholder="Email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-                <input
-                  type="password"
-                  placeholder="Password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-                <button onClick={handleAuthSubmit}>
-                  🔐 Login
-                </button>
+
+                <form onSubmit={handleAuthSubmit}>
+
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    value={email}
+                    required
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    value={password}
+                    required
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+
+                  <button type="submit">
+                    🔐 Login
+                  </button>
+
+                  {/* NEW: Cancel Button */}
+                  <button
+                    type="button"
+                    className="cancel-btn"
+                    onClick={() => {
+                      setShowAuth(false);
+                      setEmail("");
+                      setPassword("");
+                    }}
+                  >
+                    ❌ Cancel
+                  </button>
+
+                  {/* NEW: Back to Home Link */}
+                  <Link
+                    to="/"
+                    className="back-link"
+                    onClick={() => setShowAuth(false)}
+                  >
+                    ← Back to Home
+                  </Link>
+
+                </form>
+
               </div>
             )}
-          </div>
 
+          </div>
         </div>
       </div>
 

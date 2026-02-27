@@ -67,7 +67,7 @@ function AllPoems() {
     if (password === null) return;
 
     if (email !== "abc@gmail.com" || password !== "123") {
-      alert("Only Ashiq is allowed 💔");
+      alert("Only User is allowed 💔");
       return;
     }
 
